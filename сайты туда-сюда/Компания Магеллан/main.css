@@ -1,0 +1,39 @@
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    background-color: antiquewhite;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+    
+}
+.header div {
+    background-color: #35afd0;
+    padding: 20px;
+    font-weight: bold;
+    height: 45px;
+}
+.contacts {
+    background-color: #3e5a80;
+    color: #ffffff;
+    text-align: right;
+}
+.contacts a {
+    color: #add8e6;
+    text-decoration: none;
+}
+p {
+    margin-bottom: 2rem;
+}
+table {
+    margin-left: 21rem;
+    line-height: 1;
+}
