@@ -61,26 +61,26 @@ def action_selection(act):
                     "Введите число, до которого включительно будут проверены все числа: "
                 )
             )
-            print("Вот список простых чисел от 0 до N:", all_prime_to_n(num))
+            print("\nВот список простых чисел от 0 до N:", all_prime_to_n(num))
 
         case 2:
             n = int(input("Введите количество чисел, которые необходимо найти: "))
             result = x_first_prime_number(n)
-            print("Вот список N первых простых чисел:", result)
+            print("\nВот список N первых простых чисел:", result)
             print("Всего чисел в списке:", len(result))
 
         case 3:
             a, b = int(input("Введите А:")), int(input("Введите В:"))
             result = all_prime_from_a_to_b(a, b)
-            print(f"Вот список простых чисел от {a} до {b}: {result}")
+            print(f"\nВот список простых чисел от {a} до {b}: {result}")
             print("Всего чисел в списке:", len(result))
 
         case 4:
             num = int(input("Введите число для проверки: "))
             if is_prime(num):
-                print(f"Число {num} является простым")
+                print(f"\nЧисло {num} является простым")
             else:
-                print(f"Число {num} не является простым")
+                print(f"\nЧисло {num} не является простым")
 
         case 5:
             a, b = int(input("Введите стартовую точку диапазона: ")), int(
@@ -88,17 +88,18 @@ def action_selection(act):
             )
             list_num = all_prime_from_a_to_b(a, b)
             print(
-                f"Сумма простых чисел в диапазоне от {a} до {b}: {sum(list_num)}"
+                f"\nСумма простых чисел в диапазоне от {a} до {b}: {sum(list_num)}"
             )
 
         case _:
-            act = input("Ошибка, введите номер действия заново: ")
+            act = input("\nОшибка, введите номер действия заново: ")
             action_selection(act)
 
 
 while True:
     print(
-        """ Какое действие Вы хотели бы выполнить?
+        """ 
+        Какое действие Вы хотели бы выполнить?
         1. Найти все простые числа до N
         2. Найти N простых чисел
         3. Найти все простые числа от A до B
