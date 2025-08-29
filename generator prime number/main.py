@@ -38,5 +38,5 @@ def x_first_prime_number(x):
             return list_prime_num
 
 
-# print(all_prime_to_n(10))
+print(all_prime_to_n(10))
 print(x_first_prime_number(12))
