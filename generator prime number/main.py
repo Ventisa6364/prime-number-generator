@@ -47,14 +47,14 @@ def action_selection(act):
                 )
             )
             primes = all_prime_to_n(num)
-            print("\nВот список простых чисел от 0 до N:\n")
+            print(f"\nВот список простых чисел от 0 до {num}:\n")
             print(primes)
             print(f"\nВсего простых чисел: {len(primes)}")
 
         case 2:
             n = int(input("\nВведите количество чисел, которые необходимо найти: "))
             result = x_first_prime_number(n)
-            print("\nВот список N первых простых чисел:\n")
+            print(f"\nВот список {n} первых простых чисел:\n")
             print(result)
             print(f"\nВсего чисел в списке: {len(result)}")
 
