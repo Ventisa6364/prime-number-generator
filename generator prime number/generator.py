@@ -1,3 +1,6 @@
+import time
+
+
 def is_prime(num):
     if num < 2:
         return False
@@ -48,14 +51,14 @@ def action_selection(act):
             )
             primes = all_prime_to_n(num)
             print(f"\nВот список простых чисел от 0 до {num}:\n")
-            print(primes)
+            print(', '.join(map(str, primes)))
             print(f"\nВсего простых чисел: {len(primes)}")
 
         case 2:
             n = int(input("\nВведите количество чисел, которые необходимо найти: "))
             result = x_first_prime_number(n)
             print(f"\nВот список {n} первых простых чисел:\n")
-            print(result)
+            print(', '.join(map(str, result)))
             print(f"\nВсего чисел в списке: {len(result)}")
 
         case 3:
@@ -63,7 +66,7 @@ def action_selection(act):
             b = int(input("Введите В: "))
             result = all_prime_from_a_to_b(a, b)
             print(f"\nВот список простых чисел от {a} до {b}:\n")
-            print(result)
+            print(', '.join(map(str, result)))
             print(f"\nВсего чисел в списке: {len(result)}")
 
         case 4:
@@ -83,6 +86,7 @@ def action_selection(act):
             act = input("\nОшибка, введите номер действия заново: ")
             action_selection(act)
     print("-" * 50 + "\n")
+    time.sleep(5)
 
 
 while True:
