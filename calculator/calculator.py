@@ -1,34 +1,39 @@
+import time
+
 def action_selection(act):
     print("\n" + "-" * 50)
     match int(act):
         case 1:
             num1 = float(input("\nВведите первое число: "))
-            num2 = float(input("Введите второе число: "))
+            num2 = float(input("\nВведите второе число: "))
             print(f"\nРезультат: {num1} + {num2} = {num1 + num2}\n")
         case 2:
             num1 = float(input("\nВведите первое число: "))
-            num2 = float(input("Введите второе число: "))
+            num2 = float(input("\nВведите второе число: "))
             print(f"\nРезультат: {num1} - {num2} = {num1 - num2}\n")
         case 3:
             num1 = float(input("\nВведите первое число: "))
-            num2 = float(input("Введите второе число: "))
+            num2 = float(input("\nВведите второе число: "))
             print(f"\nРезультат: {num1} * {num2} = {num1 * num2}\n")
         case 4:
             num1 = float(input("\nВведите первое число: "))
-            num2 = float(input("Введите второе число: "))
+            num2 = float(input("\nВведите второе число: "))
             print(f"\nРезультат: {num1} / {num2} = {num1 / num2}\n")
         case 5:
             num1 = float(input("\nВведите основание степени: "))
-            num2 = float(input("Введите степень: "))
+            num2 = float(input("\nВведите степень: "))
             print(f"\nРезультат: {num1} ** {num2} = {num1 ** num2}\n")
         case 6:
             num = float(input("\nВведите число для вычисления квадратного корня: "))
-            degree = float(input("Введите степень корня (по умолчанию 2): ") or 2)
+            degree = float(input("\nВведите степень корня (по умолчанию 2): ") or 2)
             print(f"\nРезультат: {degree}√{num} = {num ** (1 / degree)}\n")
         case _:
             print(
                 "\nНекорректный ввод. Пожалуйста, выберите действие из списка и введите его номер: \n"
             )
+        
+    print("\n" + "-" * 50)
+    time.sleep(5)
 
 
 while True:
@@ -50,7 +55,7 @@ while True:
     act = input("Введите номер действия: ")
 
     if act == "0":
-        print("\nВыход из программы.")
+        print("\nВыход из программы.\n")
         break
 
     action_selection(act)
