@@ -1,7 +1,7 @@
 import time
 
 
-def is_prime(num):
+def is_prime(num):  # проверка числа на простоту
     if num < 2:
         return False
     for i in range(2, int(num**0.5) + 1):
@@ -10,7 +10,7 @@ def is_prime(num):
     return True
 
 
-def all_prime_to_n(n):
+def all_prime_to_n(n):  # все простые числа до n включительно
     if n < 2:
         return []
     prime_list = []
@@ -20,7 +20,7 @@ def all_prime_to_n(n):
     return prime_list
 
 
-def all_prime_from_a_to_b(a, b):
+def all_prime_from_a_to_b(a, b):  # все простые числа от a до b включительно
     if b < 2 or a > b:
         return []
     prime_list = []
@@ -30,7 +30,7 @@ def all_prime_from_a_to_b(a, b):
     return prime_list
 
 
-def x_first_prime_number(x):
+def x_first_prime_number(x):  # первые x простых чисел
     list_prime_num = []
     num = 2
     while len(list_prime_num) < x:
@@ -40,7 +40,7 @@ def x_first_prime_number(x):
     return list_prime_num
 
 
-def action_selection(act):
+def action_selection(act):  # выбор действия
     print("\n" + "-" * 50)
     match int(act):
         case 1:
@@ -89,7 +89,7 @@ def action_selection(act):
     time.sleep(5)
 
 
-while True:
+while True:  # цикл с выводом меню
     print(
         """
 ==================================================
