@@ -15,11 +15,11 @@ def get_primes_in_range(a, b): # поиск простых чисел в про�
     if a < 2:
         a = 2
 
-    prime_list = []
+    primes = []
     for i in range(a, b + 1):
         if is_prime(i):
-            prime_list.append(i)
-    return prime_list
+            primes.append(i)
+    return primes
 
 
 def x_first_prime_number(x):  # первые x простых чисел
