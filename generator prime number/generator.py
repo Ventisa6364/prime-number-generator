@@ -34,7 +34,9 @@ def x_first_prime_number(x):  # первые x простых чисел
     return list_prime_num
 
 
-def check_is_digit(num):
+def check_is_digit(string_output): # проверка ввода на число
+    print(string_output, end='')
+    num = input("")
     while not num.isdigit():
         num = input("Ошибка, введите число заново: ")
     return int(num)
@@ -47,35 +49,33 @@ def action_selection():  # выбор действия
 
         match act:
             case "1":
-                num = input("\nВведите число, числа до которого будут проверены: ")
-                num = check_is_digit(num)
+                num = check_is_digit("\nВведите число, числа до которого будут проверены: ")
                 primes = get_primes_in_range(0, num)
                 print(f"\nВот список простых чисел от 0 до {num}: {', '.join(map(str, primes))}")
                 print(f"\nВсего простых чисел: {len(primes)}\n")
 
             case "2":
-                n = input("\nВведите количество чисел, которые необходимо найти: ")
-                n = check_is_digit(n)
+                n = check_is_digit("\nВведите количество чисел, которые необходимо найти: ")
                 result = x_first_prime_number(n)
                 print(f"\nВот список {n} первых простых чисел: {', '.join(map(str, result))} \n")
 
             case "3":
-                a = check_is_digit(input("\nВведите А: "))
-                b = check_is_digit(input("Введите В: "))
+                a = check_is_digit("\nВведите А: ")
+                b = check_is_digit("Введите В: ")
                 result = get_primes_in_range(a, b)
                 print(f"\nВот список простых чисел от {a} до {b}: {', '.join(map(str, result))}")
                 print(f"\nВсего чисел в списке: {len(result)}\n")
 
             case "4":
-                num = check_is_digit(input("\nВведите число для проверки: "))
+                num = check_is_digit("\nВведите число для проверки: ")
                 if is_prime(num):
                     print(f"\nДа, число {num} является простым\n")
                 else:
                     print(f"\nНет, число {num} не является простым\n")
 
             case "5":
-                a = check_is_digit(input("\nВведите стартовую точку диапазона: "))
-                b = check_is_digit(input("Введите конечную точку диапазона: "))
+                a = check_is_digit("\nВведите стартовую точку диапазона: ")
+                b = check_is_digit("Введите конечную точку диапазона: ")
                 print(f"\nСумма простых чисел в диапазоне от {a} до {b}: {sum(get_primes_in_range(a, b))}\n")
 
             case "0":
